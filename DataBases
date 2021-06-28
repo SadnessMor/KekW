@@ -1,0 +1,323 @@
+#include <clocale>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int check_admin(string login_admin, string password_admin)
+{
+	bool check = false;
+	string valid_login = "admin";
+	string valid_pass = "admin";
+	if ((login_admin == valid_login) && (password_admin == valid_pass))
+	{
+		cout << "Доступ получен" << endl;
+	}
+	else
+	{
+		cout << "Неверный логин/пароль" << endl;
+	}
+
+	if ((login_admin == valid_login) && (password_admin == valid_pass))
+	{
+		check == true;
+	}
+	return check;
+}
+
+int check_user01(string login_user01, string password_user01)
+{
+	bool check = false;
+	string valid_login = "user01";
+	string valid_pass = "77QzCVJMUUsqpNmr";
+	if ((login_user01 == valid_login) && (password_user01 == valid_pass))
+	{
+		cout << "Доступ получен" << endl;
+	}
+	else
+	{
+		cout << "Неверный логин/пароль" << endl;
+	}
+	if ((login_user01 == valid_login) && (password_user01 == valid_pass))
+	{
+		check == true;
+	}
+	return check;
+}
+
+int check_user02(string login_user02, string password_user02)
+{
+	bool check = false;
+	string valid_login = "user 02";
+	string valid_pass = "njMF456VkSUxkHkZ";
+	if ((login_user02 == valid_login) && (password_user02 == valid_pass))
+	{
+		cout << "Доступ получен" << endl;
+	}
+	else
+	{
+		cout << "Неверный логин/пароль" << endl;
+	}
+	if ((login_user02 == valid_login) && (password_user02 == valid_pass))
+	{
+		check == true;
+	}
+	return check;
+}
+
+int check_user22(string login_user22, string password_user22)
+{
+	bool check = false;
+	string valid_login = "user22";
+	string valid_pass = "k+[tbB'{3V)^CZX*";
+	if ((login_user22 == valid_login) && (password_user22 == valid_pass))
+	{
+		cout << "Доступ получен" << endl;
+	}
+	else
+	{
+		cout << "Неверный логин/пароль" << endl;
+	}
+	if ((login_user22 == valid_login) && (password_user22 == valid_pass))
+	{
+		check == true;
+	}
+	return check;
+}
+
+int check_user32(string login_user32, string password_user32)
+{
+	bool check = false;
+	string valid_login = "user32";
+	string valid_pass = "dvmd3&VCqR}a+&qJ";
+	if ((login_user32 == valid_login) && (login_user32 == valid_pass))
+	{
+		cout << "Доступ получен" << endl;
+	}
+	else
+	{
+		cout << "Неверный логин/пароль" << endl;
+	}
+	if ((login_user32 == valid_login) && (password_user32 == valid_pass))
+	{
+		check == true;
+	}
+	return check;
+}
+
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	string pass;
+	string login;
+	string player;
+
+	cout << "Введите логин: " << endl;
+	getline(cin, login);
+	cout << endl;
+	cout << "Введите пароль: " << endl;
+	getline(cin, pass);
+	cout << endl;
+
+	if (login == "admin")
+	{
+		check_user01(login, pass);
+		bool checking = check_admin(login, pass);
+		if (checking == false)
+		{
+			while (checking != true)
+			{
+				cout << "Введите логин: " << endl;
+				getline(cin, login);
+				cout << endl;
+				cout << "Введите пароль: " << endl;
+				getline(cin, pass);
+				cout << endl;
+			}
+		}
+		else
+		{
+			cout << "Добро пожаловать, Администратор!" << endl;
+			cout << "Доступные кадры: User01, User02, User22, User32" << endl;
+			cout << "Выберите пользователя: " << endl;
+			getline(cin, player);
+			if (player == "user 01")
+			{
+				cout << "Фамилия: Горбунова" << endl;
+				cout << "Имя: Валентина" << endl;
+				cout << "Отчество: Юрьевна" << endl;
+				cout << "Пол: Женский" << endl;
+				cout << "Образование: Высшее (Техник-программист)" << endl;
+				cout << "Телефон: +79651611315" << endl;
+				cout << "Email: gorbyn-valentina@inbox.ru" << endl;
+				cout << "Должность: Оператор ЭВМ" << endl;
+				cout << "Биография: Имеются вредные привычки, имеется личный транспорт" << endl;
+			}
+			else if (player == "user 02")
+			{
+				cout << "Фамилия: Игнатьев" << endl;
+				cout << "Имя: Петр" << endl;
+				cout << "Отчество: Валерьевич" << endl;
+				cout << "Пол: Мужской" << endl;
+				cout << "Образование: Высшее (Администратор баз данных)" << endl;
+				cout << "Телефон: +79215432241" << endl;
+				cout << "Email: pyotr.ignat@bk.ru" << endl;
+				cout << "Должность: Администратор баз данных" << endl;
+				cout << "Биография: Не сидел, не имеет вредных привычек" << endl;
+			}
+			else if (player == "user 22")
+			{
+				cout << "Фамилия: Фрейзер" << endl;
+				cout << "Имя: Анна" << endl;
+				cout << "Отчество: Данииловна" << endl;
+				cout << "Пол: Женский" << endl;
+				cout << "Образование: Высшее (Бухгалтер)" << endl;
+				cout << "Телефон: +79462346829" << endl;
+				cout << "Email: freizer_09@mail.ru" << endl;
+				cout << "Должность: Уборщица" << endl;
+				cout << "Биография: Не имеет вредных привычек" << endl;
+			}
+			else if (player == "user 32")
+			{
+				cout << "Фамилия: Гусейнов" << endl;
+				cout << "Имя: Гасан" << endl;
+				cout << "Отчество: Гасанович" << endl;
+				cout << "Пол: Мужской" << endl;
+				cout << "Образование: Среднее специальное (Бармен)" << endl;
+				cout << "Телефон: +79416554835" << endl;
+				cout << "Email: ya_gusein_gasanov@list.ru" << endl;
+				cout << "Должность: Посудомойщик" << endl;
+				cout << "Биография: Не имеет вредных привычек, имеется личный транспорт" << endl;
+			}
+			else
+			{
+				cout << "Неверный ввод, повторите попытку" << endl;
+			}
+		}
+	}
+	else if (login == "user01")
+	{
+		check_user01(login, pass);
+		bool checking = check_user01(login, pass);
+		if (checking == false)
+		{
+			while (checking != true)
+			{
+				cout << "Введите логин: " << endl;
+				getline(cin, login);
+				cout << endl;
+				cout << "Введите пароль: " << endl;
+				getline(cin, pass);
+				cout << endl;
+			}
+		}
+		else
+		{
+			cout << "Добро пожаловать, User01!" << endl;
+			cout << "Фамилия: Горбунова" << endl;
+			cout << "Имя: Валентина" << endl;
+			cout << "Отчество: Юрьевна" << endl;
+			cout << "Пол: Женский" << endl;
+			cout << "Образование: Высшее (Техник-программист)" << endl;
+			cout << "Телефон: +79651611315" << endl;
+			cout << "Email: gorbyn-valentina@inbox.ru" << endl;
+			cout << "Должность: Оператор ЭВМ" << endl;
+			cout << "Биография: Имеются вредные привычки, имеется личный транспорт" << endl;
+		}
+	}
+	else if (login == "user02")
+	{
+		check_user02(login, pass);
+		bool checking = check_user02(login, pass);
+		if (checking == false)
+		{
+			while (checking != true)
+			{
+				cout << "Введите логин: " << endl;
+				getline(cin, login);
+				cout << endl;
+				cout << "Введите пароль: " << endl;
+				getline(cin, pass);
+				cout << endl;
+			}
+		}
+		else
+		{
+			cout << "Добро пожаловать, User02!" << endl;
+			cout << "Фамилия: Игнатьев" << endl;
+			cout << "Имя: Петр" << endl;
+			cout << "Отчество: Валерьевич" << endl;
+			cout << "Пол: Мужской" << endl;
+			cout << "Образование: Высшее (Администратор баз данных)" << endl;
+			cout << "Телефон: +79215432241" << endl;
+			cout << "Email: pyotr.ignat@bk.ru" << endl;
+			cout << "Должность: Администратор баз данных" << endl;
+			cout << "Биография: Не сидел, не имеет вредных привычек" << endl;
+
+		}
+	}
+
+	else if (login == "user22")
+	{
+		check_user22(login, pass);
+		bool checking = check_user22(login, pass);
+		if (checking == false)
+		{
+			while (checking != true)
+			{
+				cout << "Введите логин: " << endl;
+				getline(cin, login);
+				cout << endl;
+				cout << "Введите пароль: " << endl;
+				getline(cin, pass);
+				cout << endl;
+			}
+		}
+		else
+		{
+			cout << "Добро пожаловать, User22!" << endl;
+			cout << "Фамилия: Фрейзер" << endl;
+			cout << "Имя: Анна" << endl;
+			cout << "Отчество: Данииловна" << endl;
+			cout << "Пол: Женский" << endl;
+			cout << "Образование: Высшее (Бухгалтер)" << endl;
+			cout << "Телефон: +79462346829" << endl;
+			cout << "Email: freizer_09@mail.ru" << endl;
+			cout << "Должность: Уборщица" << endl;
+			cout << "Биография: Не имеет вредных привычек" << endl;
+		}
+	}
+	else if (login == "user32")
+	{
+		check_user32(login, pass);
+		bool checking = check_user32(login, pass);
+		if (checking == false)
+		{
+			while (checking != true)
+			{
+				cout << "Введите логин: " << endl;
+				getline(cin, login);
+				cout << endl;
+				cout << "Введите пароль: " << endl;
+				getline(cin, pass);
+				cout << endl;
+			}
+		}
+		else
+		{
+			cout << "Добро пожаловать, User32!" << endl;
+			cout << "Фамилия: Гусейнов" << endl;
+			cout << "Имя: Гасан" << endl;
+			cout << "Отчество: Гасанович" << endl;
+			cout << "Пол: Мужской" << endl;
+			cout << "Образование: Среднее специальное (Бармен)" << endl;
+			cout << "Телефон: +79416554835" << endl;
+			cout << "Email: ya_gusein_gasanov@list.ru" << endl;
+			cout << "Должность: Посудомойщик" << endl;
+			cout << "Биография: Не имеет вредных привычек, имеется личный транспорт" << endl;
+		}
+	}
+	system("pause");
+	return 0;
+}
